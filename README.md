@@ -15,15 +15,15 @@ Acquire for Android supports API 21 and above.
 Add the following dependency to your app's `build.gradle` file:
 ```groovy
 dependencies {
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile('io.socket:socket.io-client:1.0.0') {
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:support-emoji-appcompat:27.1.1'
+    implementation('io.socket:socket.io-client:1.0.0') {
         exclude group: 'org.json', module: 'json'
     }
-    compile 'com.android.support:multidex:1.0.2'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.mikhaellopez:circularimageview:2.1.1'
-    compile 'andhradroid.dev:aFilechooser:1.0.1'
-    compile 'com.acquireio:core:1.+'
+    implementation 'com.acquireio:core:1.+'
 }
 ```
 
