@@ -1,5 +1,5 @@
-![Tagove](app/src/main/res/drawable/app_icon.png)
-Tagove for Android supports API 21 and above.
+![Acquire](app/src/main/res/drawable/app_icon.png)
+Acquire for Android supports API 21 and above.
 
 ### Requirements
 -------------
@@ -10,7 +10,7 @@ Tagove for Android supports API 21 and above.
 
 ## Installation Instructions:
 
-### Steps to Install Tagove with all required dependencies 
+### Steps to Install Acquire with all required dependencies 
 
 Add the following dependency to your app's `build.gradle` file:
 ```groovy
@@ -23,7 +23,7 @@ dependencies {
     compile 'com.android.support:design:26.1.0'
     compile 'com.mikhaellopez:circularimageview:2.1.1'
     compile 'andhradroid.dev:aFilechooser:1.0.1'
-    compile 'com.tagove.sdk:core:1.+'
+    compile 'com.acquireio:core:1.+'
 }
 ```
 
@@ -42,9 +42,9 @@ allprojects {
 
 ## Setup and Configuration
 
-* Our [installation guide](https://developers.tagove.com/android-sdk-api.php) contains full setup and initialisation instructions.
-* The [configuration guide](https://developers.tagove.com/android-sdk-api.php) provides info on how to configure Tagove for Android.
-* Please contact us on [Tagove](https://www.tagove.com/) with any questions you may have, we're only a message away!
+* Our [installation guide](https://developers.acquire.io/integration-sdk) contains full setup and initialisation instructions.
+* The [configuration guide](https://developers.acquire.io/initialization-android) provides info on how to configure Acquire for Android.
+* Please contact us on [Acquire](https://www.acquire.io/) with any questions you may have, we're only a message away!
 
 ## Permissions
 
@@ -68,66 +68,16 @@ It will ask audio/video permissions when required to make a video call.
 ```
 These permissions needed when an attachment is selected to share from the app.
 
-## Dependency graph
-
-Here is our complete dependency graph:
-
-### tagove-sdk-core
-```
-# Transitive (shared with your app)
-+--- com.android.support:appcompat-v7:26.1.0
-+--- io.socket:socket.io-client:0.8.3
-+--- com.android.support:design:26.1.0
-+--- com.mikhaellopez:circularimageview:2.1.1
-+--- andhradroid.dev:aFilechooser:1.0.1
-
-# Repackaged (not shared with your app)
-+--- com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0
-+--- com.squareup.picasso:picasso:2.5.2
-+--- com.google.code.gson:gson:2.8.1
-```
-
 ## Building 
 - Make sure you've installed the Android 7.1.1 SDK and upgraded to the latest version of Android Studio
 - Make sure you've updated all support repository and Google Play Services repository packages in the Android SDK manager
-- Check out or Download nilayTagove/DemoApp project for easy setup for your project.
-- See the configuration and clone the environment into your project to run our Tagove chat sdk.
+- See the configuration and clone the environment into your project to run our Acquire chat sdk.
 
 Note : _**If you are using gradle Plugin version 3.0 then use implementation instead of compile**_.         
-For release apk if you want to give support to arm-v7 ABI only then use "```'com.tagove.sdk:core-arm-v7a:1.+'```" instead of "```'com.tagove.sdk:core:1.+'```". to reduce apk size.
+For release apk if you want to give support to arm-v7 ABI only then use "```'com.acquireio:core-arm-v7a:1.+'```" instead of "```'com.acquireio:core:1.+'```". to reduce apk size.
 
 -------------
 
-If you are using proguard then add these lines into your proguard-rules.pro
-```javascript
--dontwarn com.squareup.**
--dontwarn okio.**
-
--keep class org.webrtc.** {*;}
--keep class com.tagove.sdk**
--keep class com.tagove.sdk.activities**
--keep class com.squareup**
--keep class com.jakewharton**
--keepattributes Signature
--keep class sun.misc.Unsafe { *; }
-
--keep class com.crashlytics.** { *; }
--dontwarn com.crashlytics.**
-
--keepclassmembers class com.tagove.sdk** {*;}
--keepclassmembers class com.squareup** {*;}
--keepclassmembers class com.jakewharton** {*;}
-
--keep public class com.tagove.sdk.** {
-  public protected *;
-}
--keep public class io.socket.** {
-  public protected *;
-}
--keep public class com.mikhaellopez.** {
-  public protected *;
-}
-```
 And that's it :thumbsup: 
 Voila!! You had integrated whole chat module in few minutes.
 
