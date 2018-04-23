@@ -8,8 +8,9 @@ import android.widget.TextView;
 
 import com.acquireio.AcquireApp;
 import com.acquireio.callbacks.OnSessionEvents;
+import com.acquireio.callbacks.UnreadMessageCount;
 
-public class MainActivity extends AppCompatActivity implements OnSessionEvents {
+public class MainActivity extends AppCompatActivity implements OnSessionEvents, UnreadMessageCount {
 
     private        TextView txtSocketStatus;
     private        Button   btnSupport;
@@ -26,12 +27,8 @@ public class MainActivity extends AppCompatActivity implements OnSessionEvents {
         txtSocketStatus = findViewById(R.id.txtSocketStatus);
         btnSupport = findViewById(R.id.btnSupport);
         btnSupport.setEnabled(false);
-        try {
-            // AcquireApp.getInstance() throws Exception if correct Account id is not provided
-            AcquireApp.getInstance().setSessionListner(this);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        AcquireApp.getInstance().setSessionListner(this);
+        AcquireApp.getInstance().setUnreadCountListner(this);
         btnSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,5 +82,15 @@ public class MainActivity extends AppCompatActivity implements OnSessionEvents {
     @Override
     public void onAgentAvailable() {
 
+    }
+
+    @Override
+    public void updateUnreadMessageCount(final int count) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                txtSocketStatus.setText("You have " + count + " Unread messages.");
+            }
+        });
     }
 }
