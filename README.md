@@ -15,7 +15,7 @@ Acquire for Android supports API 21 and above.
 Add the following dependency to your app's `build.gradle` file:
 ```groovy
 dependencies {
-     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:multidex:1.0.3'
