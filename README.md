@@ -80,5 +80,3 @@ For release apk if you want to give support to arm-v7 ABI only then use "```'com
 
 And that's it :thumbsup: 
 Voila!! You had integrated whole chat module in few minutes.
-
-To Enable Debug Mode Please tap on Text chat button on top for 5 times.
