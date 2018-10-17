@@ -42,8 +42,8 @@ allprojects {
 
 ## Setup and Configuration
 
-* Our [installation guide](https://developers.acquire.io/integration-sdk) contains full setup and initialisation instructions.
-* The [configuration guide](https://developers.acquire.io/initialization-android) provides info on how to configure Acquire for Android.
+* Our [installation guide](https://developer.acquire.io/android/getting-started) contains full setup and initialisation instructions.
+* The [configuration guide](https://developer.acquire.io/android/getting-started/start-using-acquire) provides info on how to configure Acquire for Android.
 * Please contact us on [Acquire](https://www.acquire.io/) with any questions you may have, we're only a message away!
 
 ## Permissions
